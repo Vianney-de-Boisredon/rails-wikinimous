@@ -1,0 +1,15 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.content %></p>
+
+  <% if @article.read %>
+    <input type="checkbox" checked>
+    <p>This article is has been read.</p>
+  <% else %>
+    <input type="checkbox">
+    <p>This article is has not been read.</p>
+  <% end %>
+
+<%= link_to "Back to articles", articles_path %>
+
+<%= link_to "Edit this article", edit_article_path %>
+
